@@ -31,7 +31,7 @@ class ApiController extends Controller
 
     public function update_data_barang(Request $request, $id)
     {
-        $check = BarangModel::Where('kode_barang',$id);
+        $check = BarangModel::firstWhere('kode_barang',$id);
 
         if($check)
         {
